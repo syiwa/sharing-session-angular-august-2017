@@ -1,0 +1,65 @@
+<div class="col-md-12">
+  <h1>Tips menampilkan data di Angular</h1>
+</div>
+
+<div class="col-md-12">
+  <ul class="list-group" [class.text-left]="true">
+    <li class="list-group-item">
+      <h3>Menggunakan <code>{{ brace("nama_variabel") }}</code></h3>
+      nama_variabel dideklarasi di component.ts
+      <pre>
+          <div class="btn btn-default" (click)="nama_variabel = 'aWawaW'">
+            nama_variabel = "aWawaW"
+          </div><div class="btn btn-default" (click)="nama_variabel = 'wWeeWW'">
+            nama_variabel = "wWeeWW"
+          </div>
+          {{ nama_variabel }}
+      </pre>
+    </li>
+    <li class="list-group-item">
+      <h3>Menggunakan <code>{{ brace("nama_function()") }}</code></h3>
+      nama_function() dideklarasi di component.ts & dikasih <code>return</code>
+      <pre>
+        {{ ambilWaktu() }}
+      </pre>
+    </li>
+    <li class="list-group-item">
+      <h3>Bisa buat hitung-hitungan</h3>
+      <code>{{brace("1 + 1")}}</code> = 2
+      <pre>
+        {{ 1 + 01239213 * 291390123 / 123132 - 231231 * 231123  }}
+      </pre>
+    </li>
+    <li class="list-group-item">
+      <h3>Bisa buat unicode html</h3>
+      <code>&lt;span [innerHTML]="string_html"&gt;&lt;/span&gt;</code>
+      <br>
+      string_html adalah html yang dijadiin variabel di component.ts
+      <pre>
+        <span [innerHTML]="html_string"></span>
+      </pre>
+    </li>
+
+    <li class="list-group-item">
+      <h3>Diapa-apain gampang</h3>
+      Bisa pake pipe
+      <code>{{ brace('nama_variabel | uppercase') }}</code>
+      dll
+      <br>
+      Pipe bisa custom juga
+      <pre>
+        {{ 'uPPercAse' | uppercase }}
+        {{ 'lOwErcaSe' | lowercase }}
+        {{ variabel_tanggal | date: 'dd/mm/yyyy' }}
+      </pre>
+    </li>
+    <li class="list-group-item">
+      <h3>Gunakan ? ketika memanggil variabel object yang berpotensi <code>undefined</code></h3>
+      <code>{{ brace('variabel_undefined?.name') }}</code>
+      Tidak akan berpengaruh ketika <kbd>variabel_undefined</kbd> adalah <code>undefined</code>
+      <pre>
+        {{ variabel_undefined?.name }}
+      </pre>
+    </li>
+  </ul>
+</div>

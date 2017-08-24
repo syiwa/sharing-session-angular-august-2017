@@ -1,0 +1,43 @@
+<div class="container" [style.margin-top.px]="20">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-body" [class.text-center]="true">
+          <div class="btn btn-primary" routerLink="interpolation">
+            Menampilkan data
+          </div>
+
+          <div class="btn btn-primary" routerLink="binding">
+            Sintaks untuk Binding
+          </div>
+
+          <div class="btn btn-primary" routerLink="attribute">
+            Class/Style/Attribute
+          </div>
+
+          <div class="btn btn-primary">
+            Structural Directives
+          </div>
+
+          <div class="btn btn-primary">
+            ngSwitch
+          </div>
+
+          <div class="btn btn-primary">
+            Template variable
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-body" [class.text-center]="true">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+</div>

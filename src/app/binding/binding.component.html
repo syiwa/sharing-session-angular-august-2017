@@ -1,0 +1,41 @@
+<div class="col-md-12">
+  <h1>Binding di Angular</h1>
+</div>
+
+<div class="col-md-12">
+  <ul class="list-group" [class.text-left]="true">
+    <li class="list-group-item">
+      <h3>Dari COMPONENT ke HTML</h3>
+      <pre>
+          <div class="btn btn-default" title="{{ namaTitle }}">
+            Binding ke attribute title pake {{ brace('') }}
+          </div>
+          <div class="btn btn-default" [title]="namaTitle">
+            Binding ke attribute title pake [ ]
+          </div>
+          <div class="btn btn-default" bind-title="namaTitle">
+            Binding ke attribute title pake bind-(nama attribute)
+          </div>
+      </pre>
+    </li>
+    <li class="list-group-item">
+      <h3>Dari HTML ke COMPONENT (Event / Trigger)</h3>
+      <pre>
+          <div class="btn btn-default" (click)="alert('Ini Alert')">
+            Event pake ( )
+          </div>
+          <div class="btn btn-default" on-click="alert('Ini Juga Alert')">
+            Event pake on-(nama eventnya)
+          </div>
+      </pre>
+    </li>
+    <li class="list-group-item">
+      <h3>Dua Arah (Biasanya untuk ngModel)</h3>
+      Kalau <code>[(ngModel)]</code> harus import <code>FormsModule</code> dulu di module parent nya
+      <pre>
+          <input type="text" [(ngModel)]="variabelModel"><button (click)="setDariComponent('di set dari component')">Set variabelModel dari component</button>
+          {{ variabelModel }}
+      </pre>
+    </li>
+  </ul>
+</div>
